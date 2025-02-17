@@ -1,8 +1,8 @@
-module github.com/LorinHan/dm-driver
+module dm
 
-go 1.20
+go 1.13
 
 require (
-	github.com/golang/snappy v0.0.4 // indirect
-	golang.org/x/text v0.22.0 // indirect
+	github.com/golang/snappy v0.0.1
+	golang.org/x/text v0.3.2
 )
