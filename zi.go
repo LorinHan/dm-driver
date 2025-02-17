@@ -6,7 +6,7 @@ package dm
 
 import (
 	"bytes"
-	"dm/util"
+	"github.com/LorinHan/dm-driver/util"
 	"io"
 	"math/big"
 	"strconv"

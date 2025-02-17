@@ -5,8 +5,8 @@
 package dm
 
 import (
-	"dm/util"
 	"fmt"
+	"github.com/LorinHan/dm-driver/util"
 	"math"
 	"os"
 	"strconv"
@@ -132,7 +132,7 @@ const (
 
 	Dm_build_1025 int32 = 0xFFFE - 3
 
-	Dm_build_1026 int32 = 0XFFFE - 4
+	Dm_build_1026 int32 = 0xFFFE - 4
 
 	Dm_build_1027 int32 = 0xFFFE
 

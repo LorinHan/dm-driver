@@ -5,8 +5,8 @@
 package dm
 
 import (
-	"dm/util"
 	"fmt"
+	"github.com/LorinHan/dm-driver/util"
 	"math"
 	"os"
 	"sort"

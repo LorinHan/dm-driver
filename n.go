@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"context"
 	"database/sql/driver"
-	"dm/util"
+	"github.com/LorinHan/dm-driver/util"
 	"net"
 	"net/url"
 	"os"

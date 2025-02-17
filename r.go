@@ -6,7 +6,7 @@ package dm
 
 import (
 	"database/sql/driver"
-	"dm/util"
+	"github.com/LorinHan/dm-driver/util"
 	"math"
 	"strconv"
 	"strings"

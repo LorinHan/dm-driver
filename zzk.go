@@ -6,8 +6,8 @@ package dm
 
 import (
 	"bytes"
-	"dm/parser"
-	"dm/util"
+	"github.com/LorinHan/dm-driver/parser"
+	"github.com/LorinHan/dm-driver/util"
 	"strconv"
 	"strings"
 )

@@ -8,7 +8,7 @@ import (
 	"context"
 	"database/sql"
 	"database/sql/driver"
-	"dm/i18n"
+	"github.com/LorinHan/dm-driver/i18n"
 	"net"
 	"sync"
 )
@@ -38,8 +38,8 @@ func driverInit(svcConfPath string) {
 
 type DmDriver struct {
 	filterable
-	mu           sync.Mutex
-	//readPropMutex sync.Mutex
+	mu sync.Mutex
+	// readPropMutex sync.Mutex
 }
 
 func newDmDriver() *DmDriver {
@@ -103,9 +103,9 @@ func (d *DmDriver) openConnector(dsn string) (*DmConnector, error) {
 	connector := new(DmConnector).init()
 	connector.url = dsn
 	connector.dmDriver = d
-	//d.readPropMutex.Lock()
+	// d.readPropMutex.Lock()
 	err := connector.mergeConfigs(dsn)
-	//d.readPropMutex.Unlock()
+	// d.readPropMutex.Unlock()
 	if err != nil {
 		return nil, err
 	}

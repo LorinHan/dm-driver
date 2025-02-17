@@ -6,8 +6,8 @@
 package dm
 
 import (
-	"dm/util"
 	"fmt"
+	"github.com/LorinHan/dm-driver/util"
 	"math"
 	"strconv"
 	"strings"
@@ -670,7 +670,7 @@ func (OracleDateFormat *oracleDateFormat) parse(str string) (ret []int, err erro
 		}
 	}
 	if offset < len(str) {
-		//[6103]:文字与格式字符串不匹配.
+		// [6103]:文字与格式字符串不匹配.
 		return nil, ECGO_INVALID_DATETIME_VALUE.throw()
 	}
 

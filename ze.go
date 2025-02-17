@@ -8,8 +8,8 @@ package dm
 import (
 	"context"
 	"database/sql/driver"
-	"dm/util"
 	"fmt"
+	"github.com/LorinHan/dm-driver/util"
 	"io"
 	"reflect"
 	"strconv"
@@ -643,14 +643,14 @@ func (logger Logger) Warn(msg string) {
 	}
 }
 func (logger Logger) ErrorWithErr(msg string, err error) {
-	//if e, ok := err.(*DmError); ok {
+	// if e, ok := err.(*DmError); ok {
 	//	logger.println(logger.formatHead("ERROR") + msg + util.LINE_SEPARATOR + e.FormatStack())
-	//} else {
+	// } else {
 	logger.println(logger.formatHead("ERROR") + msg + util.LINE_SEPARATOR + err.Error())
-	//}
+	// }
 }
 
-//TODO: 获取goroutine objId
+// TODO: 获取goroutine objId
 func (logger Logger) formatHead(head string) string {
 	// return "[" + head + " - " + StringUtil.formatTime() + "] tid:" + Thread.currentThread().getId();
 	return "[" + head + " - " + util.StringUtil.FormatTime() + "]"
@@ -763,11 +763,11 @@ func formatTrace(source string, sql string, method string, returnValue interface
 			if i != 0 {
 				str += ", "
 			}
-			//if s, ok := params[i].(driver.NamedValue); ok {
+			// if s, ok := params[i].(driver.NamedValue); ok {
 			//	str += fmt.Sprintf("%v", s.Value)
-			//} else {
+			// } else {
 			str += fmt.Sprintf("%v", params[i])
-			//}
+			// }
 		}
 		str += "; "
 	}
