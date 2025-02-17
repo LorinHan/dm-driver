@@ -1,4 +1,4 @@
-module dm-driver
+module github.com/LorinHan/dm-driver
 
 go 1.20
 
